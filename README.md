@@ -1,5 +1,5 @@
 # vue-mpa
-multi page application
+multi pages application
 
 ## Project setup
 ```

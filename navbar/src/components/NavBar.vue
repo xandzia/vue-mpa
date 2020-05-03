@@ -1,15 +1,15 @@
 <template>
   <aside
           class="aside-wrapper"
-          :class="{ 'aside-wrapper__mini': mini}"
+          :class="{ 'aside-wrapper__mini': mini }"
   >
-    <div>
+    <section>
       <div class="aside-wrapper__top">
         <div
                 class="aside-wrapper__picture"
                 @click="openNav"
         >
-          <img src="https://source.unsplash.com/random/80x80" alt="random image">
+          <img src="https://source.unsplash.com/random/80x80" alt="random image" @click="goTo('home')">
         </div>
         <span class="aside-wrapper__main-text">Lorem ipsum</span>
         <button
@@ -29,37 +29,29 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </section>
   </aside>
 </template>
 
 <script>
   export default {
     name: 'NavBar',
-    props: {
-      msg: String
-    },
-    components: {
-    },
     data () {
       return {
         mini: false
       }
     },
-      computed: {
+    methods: {
+      openNav() {
+        this.mini = false;
       },
-      methods: {
-        openNav() {
-          this.mini = false;
-        },
-        closeNav() {
-          this.mini = true;
-        },
-        goTo(item) {
-          console.log('goTo')
-          this.$emit('goTo', item)
-        }
+      closeNav() {
+        this.mini = true;
       },
+      goTo(item) {
+        this.$emit('goTo', item)
+      }
+    }
   }
 </script>
 
@@ -73,7 +65,6 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /*color: var(--general-blue);*/
     color: #2c3e50;
     height: 100%;
     min-height: 100vh;
@@ -170,7 +161,7 @@
       cursor: pointer;
       svg {
         min-width: 30px;
-        padding-left: 6px;
+        padding-left: 16px;
         padding-right: 15px;
       }
       span {
@@ -197,7 +188,7 @@
       opacity: .08;
     }
     &__nav {
-      padding: 15px 10px;
+      padding: 15px 0px;
     }
   }
 </style>

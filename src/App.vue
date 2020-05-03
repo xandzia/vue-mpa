@@ -1,24 +1,22 @@
 <template>
   <div id="app">
     <NavBar @goTo="onGoTo"></NavBar>
-    <List></List>
-    <ImageItem></ImageItem>
+    <router-view/>
   </div>
 </template>
 
 <script>
   import NavBar from 'navbar'
-  import List from 'list'
-  import ImageItem from 'image-item'
 
   export default {
     name: 'App',
     components: {
-      NavBar, List, ImageItem
+      NavBar
     },
     methods: {
       onGoTo(item) {
         console.log(item)
+        this.$router.push({ path: item })
       }
     }
   }
@@ -31,5 +29,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-direction: row;
 }
 </style>
