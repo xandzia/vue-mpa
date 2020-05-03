@@ -15,7 +15,6 @@
     },
     methods: {
       onGoTo(item) {
-        console.log(item)
         this.$router.push({ path: item })
       }
     }
@@ -31,5 +30,6 @@
   color: #2c3e50;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 </style>

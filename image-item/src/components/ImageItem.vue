@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="image__wrapper">
     <picture class="image__item">
       <source srcset="https://picsum.photos/1360/800" media="(min-width: 1400px)"/>
       <source srcset="https://placeimg.com/1000/800/nature" media="(min-width: 1200px)"/>
@@ -17,15 +17,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .image__item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    .img {
-      height: 100px;
-      width: 100px;
+  .image {
+    &__wrapper {
+      margin: 2em;
+    }
+    &__item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @media all and (max-width: 504px){
+    .image__wrapper {
+      width: 100%;
     }
   }
 </style>

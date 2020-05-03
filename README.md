@@ -1,5 +1,5 @@
 # vue-mpa
-multi pages application
+multi page application
 
 ## Project setup
 ```
@@ -21,7 +21,7 @@ npm run build
 npm run lint
 ```
 
-#### for installing components (for example NavBar) and add to package.json
+#### note: for installing components (for example NavBar) and add to package.json
 ```
 npm install --save ./navbar
 ```

@@ -57,7 +57,7 @@
 
 
 <style lang="scss">
-  html, body, ul {
+  html, body {
     margin: 0;
     padding: 0;
   }
@@ -69,7 +69,7 @@
     height: 100%;
     min-height: 100vh;
     transform: translateX(0%);
-    width: 238px;
+    min-width: 238px;
     display: flex;
     flex-direction: column;
     left: 0;
@@ -85,6 +85,7 @@
     border-right: 1px solid rgba(0,0,0,.12);
     &__mini {
       transform: translateX(0%);
+      min-width: 62px;
       width: 62px;
       overflow: hidden;
     }
@@ -188,7 +189,16 @@
       opacity: .08;
     }
     &__nav {
-      padding: 15px 0px;
+      padding: 15px 0;
+      ul {
+        padding: 0;
+      }
+    }
+  }
+  @media all and (max-width: 504px){
+    .aside-wrapper {
+      /*position: absolute;*/
+      z-index: 2;
     }
   }
 </style>
