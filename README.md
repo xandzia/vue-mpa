@@ -1,5 +1,5 @@
 # multi apps
-multi apps
+multi apps  - [demo](https://xandzia.github.io/vue-multi-apps/)
 
 ## Project setup
 ```
