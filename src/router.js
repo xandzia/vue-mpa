@@ -30,7 +30,7 @@ const router = new Router({
             component: PageNotFound
         }
     ],
-    mode: 'history'
+    // mode: 'history'
 });
 
 export default router
