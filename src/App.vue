@@ -15,7 +15,9 @@
     },
     methods: {
       onGoTo(item) {
-        this.$router.push({ path: item })
+        if (this.$route.name !== item) {
+          this.$router.push({ path: item }).catch(() => {})
+        }
       }
     }
   }

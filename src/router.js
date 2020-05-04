@@ -13,12 +13,12 @@ const router = new Router({
         },
         {
             path: "/list",
-            name: "List",
+            name: "list",
             component: List
         },
         {
             path: "/image",
-            name: "Image",
+            name: "image",
             component: ImageItem,
         },
         {
