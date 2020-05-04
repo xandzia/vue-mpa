@@ -43,10 +43,10 @@
     },
     methods: {
       openNav() {
-        this.mini = false;
+        this.mini = false
       },
       closeNav() {
-        this.mini = true;
+        this.mini = true
       },
       goTo(item) {
         this.$emit('goTo', item)

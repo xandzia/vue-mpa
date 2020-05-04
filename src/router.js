@@ -4,7 +4,7 @@ import PageNotFound from './components/PageNotFound.vue'
 import ImageItem from 'image-item'
 import List from 'list'
 
-Vue.use(Router);
+Vue.use(Router)
 
 const router = new Router({
     routes: [
@@ -33,4 +33,4 @@ const router = new Router({
     mode: 'history'
 });
 
-export default router;
+export default router
